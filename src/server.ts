@@ -1,5 +1,5 @@
 import express, {
-  Application, RequestHandler
+  Application, Request, RequestHandler, Response
 } from 'express'
 import cors from 'cors'
 import {
@@ -22,8 +22,14 @@ app.use(cors({
 }))
 app.use(express.json() as RequestHandler)
 
-app.use(checkAuth)
-app.use(delay)
+app.route('/status').get((req: Request, res: Response) => {
+  res.status(200).json({
+    server: 'running'
+  })
+})
+
+app.use('/api/*', checkAuth)
+app.use('/api/*', delay)
 
 app.route('/api/auth/login').post(authRoutes.login)
 app.route('/api/auth/logout').post(authRoutes.logout)
