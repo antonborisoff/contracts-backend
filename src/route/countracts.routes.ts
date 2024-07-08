@@ -3,7 +3,7 @@ import {
 } from 'express'
 import {
   contractHandlers
-} from '../controller/contracts'
+} from '../controller/contracts.controller'
 
 export const contractRouter = Router()
 

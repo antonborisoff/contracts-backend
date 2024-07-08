@@ -3,7 +3,7 @@ import {
 } from 'express'
 import {
   authHandlers
-} from '../controller/auth'
+} from '../controller/auth.controller'
 
 export const authRouter = Router()
 
