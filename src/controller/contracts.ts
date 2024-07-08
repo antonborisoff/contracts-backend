@@ -4,13 +4,13 @@ import {
 } from 'express'
 import {
   CONTRACTS
-} from './model/contracts'
+} from '../model/contracts'
 
 let currentContracts = CONTRACTS
 
 type Contract = typeof CONTRACTS[0]
 
-export const contractRoutes = {
+export const contractHandlers = {
   getContracts: function (req: Request, res: Response): void {
     res.status(200).json(currentContracts)
   },

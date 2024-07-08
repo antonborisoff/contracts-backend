@@ -4,12 +4,12 @@ import {
 } from 'express'
 import {
   USERS
-} from './model/users'
+} from '../model/users'
 import {
   ACTIVE_FEATURES
-} from './model/activeFeatures'
+} from '../model/activeFeatures'
 
-export const authRoutes = {
+export const authHandlers = {
   login: function (req: Request, res: Response): void {
     const user = USERS.find((user) => {
       return user.login === req.body.login && user.password === req.body.password
