@@ -10,10 +10,10 @@ import {
 } from './middleware/delay.middleware'
 import {
   authRouter
-} from './route/auth'
+} from './route/auth.routes'
 import {
   contractRouter
-} from './route/countracts'
+} from './route/countracts.routes'
 
 const app: Application = express()
 
