@@ -5,7 +5,7 @@ import {
 } from 'express'
 import {
   USERS
-} from './users'
+} from '../model/users'
 
 export function checkAuth(req: Request, res: Response, next: NextFunction): void {
   if (req.originalUrl !== '/api/auth/login') {

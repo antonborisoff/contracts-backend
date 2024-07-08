@@ -4,7 +4,7 @@ import {
 } from 'express'
 import {
   CONTRACTS
-} from './contracts'
+} from './model/contracts'
 
 let currentContracts = CONTRACTS
 

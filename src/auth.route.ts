@@ -4,10 +4,10 @@ import {
 } from 'express'
 import {
   USERS
-} from './users'
+} from './model/users'
 import {
   ACTIVE_FEATURES
-} from './activeFeatures'
+} from './model/activeFeatures'
 
 export const authRoutes = {
   login: function (req: Request, res: Response): void {

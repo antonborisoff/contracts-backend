@@ -7,7 +7,7 @@ import {
 } from './auth.route'
 import {
   checkAuth
-} from './auth.middleware'
+} from './middleware/auth.middleware'
 import {
   contractRoutes
 } from './contracts.route'
